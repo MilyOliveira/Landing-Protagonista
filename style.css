@@ -287,3 +287,60 @@ section+section {
     font-weight: 300;
     opacity: 0.9;
 }
+
+/* =========================
+   HERO COM VÍDEO
+========================= */
+
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* vídeo como fundo */
+.hero-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ISSO É O MAIS IMPORTANTE */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* camada escura */
+.hero-video .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2;
+}
+
+/* conteúdo */
+.hero-video .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-video h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-video p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
