@@ -334,13 +334,26 @@ section+section {
 }
 
 .hero-video h1 {
-    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
     font-weight: 700;
+    line-height: 1.1;
     letter-spacing: 2px;
 }
+
 
 .hero-video p {
     margin-top: 20px;
     font-size: 1.2rem;
     opacity: 0.9;
+}
+
+.bg-image {
+    background-image: url("sobre.jpg");
+    /* nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #ffffff;
 }
