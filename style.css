@@ -161,6 +161,11 @@ section+section {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.conducao-grid {
+    grid-template-columns: 1fr;
+}
+
+
 /* =========================
    PÚBLICO-ALVO
 ========================= */
@@ -172,4 +177,27 @@ section+section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+/* =========================
+   CONDUÇÃO
+========================= */
+.conducao {
+    background-color: var(--bg-dark);
+}
+
+.conducao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.conducao-imagem img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.conducao-texto h2 {
+    margin-bottom: 30px;
 }
