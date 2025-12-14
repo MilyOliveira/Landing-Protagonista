@@ -7,6 +7,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-dark: #0f0f0f;
+    --text-light: #ffffff;
+    --accent: #c89b3c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+
 /* =========================
    VARIÁVEIS
 ========================= */
