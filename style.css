@@ -193,10 +193,18 @@ section+section {
     align-items: center;
 }
 
+.conducao-imagem {
+    display: flex;
+    justify-content: center;
+}
+
 .conducao-imagem img {
     width: 100%;
+    max-width: 380px;
     border-radius: 30px;
 }
+
+
 
 .conducao-texto h2 {
     margin-bottom: 30px;
