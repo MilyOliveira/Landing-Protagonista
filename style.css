@@ -95,10 +95,9 @@ header {
    SEÇÕES
 ========================= */
 .section {
-    max-width: 1000px;
-    margin: auto;
     text-align: center;
 }
+
 
 .bg-light {
     background-color: var(--bg-light);
@@ -382,3 +381,136 @@ section+section {
 .sobre {
     padding: 220px 20px;
 }
+
+.sobre-texto {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.bg-dark-section {
+    background: linear-gradient(180deg,
+            #0f0f0f 0%,
+            #161616 50%,
+            #0f0f0f 100%);
+}
+
+/* =========================
+   PILARES
+========================= */
+
+.bg-pilares {
+    background: linear-gradient(180deg,
+            #111 0%,
+            #1a1a1a 50%,
+            #111 100%);
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+/* CARD DO PILAR */
+.pilar {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* EFEITO DE BOTÃO */
+.pilar:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* CABEÇALHO DO PILAR */
+.pilar-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icone {
+    font-size: 2rem;
+}
+
+/* TEXTO OCULTO */
+.pilar-texto {
+    margin-top: 20px;
+    display: none;
+    opacity: 0.9;
+}
+
+/* AO CLICAR */
+.pilar.active .pilar-texto {
+    display: block;
+}
+
+/* PILARES INTERATIVOS */
+.pilar {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pilar:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pilar-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.pilar.active .pilar-content {
+    max-height: 300px;
+    /* suficiente pro texto */
+    margin-top: 20px;
+}
+
+.pilar-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pilar-icon {
+    font-size: 1.1rem;
+    color: #b22222;
+}
+
+.pilares {
+    position: relative;
+    background-image: url("pilares-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pilares::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.pilares>* {
+    position: relative;
+    z-index: 1;
+}
+
+.pilares {
+    padding: 180px 20px;
+}
+
+@media (max-width: 768px) {
