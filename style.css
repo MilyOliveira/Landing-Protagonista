@@ -566,3 +566,36 @@ section+section {
             font-size: 1rem;
         }
     }
+
+    @media (max-width: 768px) {
+        .bg-image::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .publico {
+            background: linear-gradient(180deg,
+                    #111 0%,
+                    #1a1a1a 100%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .publico .card {
+            padding: 30px 25px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .publico-grid {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pilares {
+            background-image: url("pilares-bg.jpg"),
+                linear-gradient(180deg, #111, #1a1a1a);
+        }
+    }
