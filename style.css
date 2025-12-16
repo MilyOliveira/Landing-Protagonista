@@ -514,3 +514,55 @@ section+section {
 }
 
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+        section {
+            padding: 100px 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .publico-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pilares-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .conducao-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .conducao-imagem img {
+            max-width: 280px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pilar-content {
+            max-height: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .btn {
+            padding: 18px 50px;
+            font-size: 1rem;
+        }
+    }
