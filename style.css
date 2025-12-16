@@ -43,8 +43,9 @@ body {
 
 section,
 header {
-    padding: 160px 20px;
+    padding: 120px 20px;
 }
+
 
 .container {
     max-width: 1100px;
@@ -222,8 +223,10 @@ section+section {
 .conducao-imagem img {
     width: 100%;
     max-width: 380px;
-    border-radius: 30px;
+    height: auto;
+    object-fit: contain;
 }
+
 
 
 
@@ -357,12 +360,10 @@ section+section {
     color: #ffffff;
 }
 
-.bg-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
+background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.6));
+
 
 .bg-image .container {
     position: relative;
@@ -370,8 +371,9 @@ section+section {
 }
 
 .sobre {
-    padding: 220px 20px;
+    padding: 140px 20px;
 }
+
 
 .sobre-texto {
     max-width: 800px;
@@ -430,18 +432,6 @@ section+section {
 
 .icone {
     font-size: 2rem;
-}
-
-/* TEXTO OCULTO */
-.pilar-texto {
-    margin-top: 20px;
-    display: none;
-    opacity: 0.9;
-}
-
-/* AO CLICAR */
-.pilar.active .pilar-texto {
-    display: block;
 }
 
 /* PILARES INTERATIVOS */
@@ -537,4 +527,8 @@ section+section {
         line-height: 1.7;
     }
 
-}
+    @media (max-width: 768px) {
+        .conducao-imagem img {
+            max-width: 260px;
+        }
+    }
