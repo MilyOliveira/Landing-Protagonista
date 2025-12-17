@@ -1,28 +1,20 @@
-/* =========================
-   RESET GLOBAL
-========================= */
-* {
+RESET GLOBAL * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   VARIÁVEIS
-========================= */
-:root {
+
+VARIÁVEIS:root {
     --bg-dark: #0f0f0f;
-    --bg-light: #f4f4f4;
-    --text-dark: #111;
     --text-light: #ffffff;
     --accent: #c89b3c;
 }
 
-/* =========================
-   BASE
-========================= */
-body {
+
+BASE body {
     font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
 }
@@ -38,10 +30,8 @@ header {
     margin: 0 auto;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
-.section {
+
+SEÇÕES .section {
     text-align: center;
 }
 
@@ -51,10 +41,8 @@ header {
     color: var(--text-dark);
 }
 
-/* =========================
-   CARDS
-========================= */
-.card {
+
+CARDS .card {
     background: rgba(255, 255, 255, 0.06);
     padding: 50px 40px;
     border-radius: 24px;
@@ -62,10 +50,8 @@ header {
 }
 
 
-/* =========================
-   BOTÃO
-========================= */
-.btn {
+
+BOTÃO .btn {
     display: inline-block;
     margin-top: 40px;
     padding: 15px 40px;
@@ -82,19 +68,15 @@ header {
     opacity: 0.9;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
-@media (max-width: 600px) {
+
+RESPONSIVO @media (max-width: 600px) {
     .hero h1 {
         font-size: 2.2rem;
     }
 }
 
-/* =========================
-   TIPOGRAFIA
-========================= */
-h1,
+
+TIPOGRAFIA h1,
 h2,
 h3 {
     letter-spacing: 1px;
@@ -110,11 +92,6 @@ p {
     opacity: 0.9;
     line-height: 1.8;
 }
-
-.publico-grid {
-    grid-template-columns: 1fr;
-}
-
 
 section+section {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -134,10 +111,8 @@ section+section {
 
 
 
-/* =========================
-   PÚBLICO-ALVO
-========================= */
-.publico {
+
+PÚBLICO-ALVO .publico {
     background-color: var(--bg-dark);
 }
 
@@ -147,10 +122,7 @@ section+section {
     gap: 30px;
 }
 
-/* =========================
-   CONDUÇÃO
-========================= */
-.conducao {
+CONDUÇÃO .conducao {
     background-color: var(--bg-dark);
 }
 
@@ -180,11 +152,7 @@ section+section {
     margin-bottom: 30px;
 }
 
-/* =========================
-   HERO COM VÍDEO
-========================= */
-
-.hero-video {
+HERO COM VÍDEO .hero-video {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -255,11 +223,8 @@ section+section {
 }
 
 .sobre {
-    padding: 200px 20px;
-    background-color: #f4f4f4;
-    color: #111;
+    padding: 140px 20px;
 }
-
 
 
 .sobre-texto {
@@ -287,18 +252,6 @@ section+section {
 
 .pilar:hover {
     background: rgba(255, 255, 255, 0.08);
-}
-
-.pilar-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-
-.pilar.active .pilar-content {
-    max-height: 300px;
-    /* suficiente pro texto */
-    margin-top: 20px;
 }
 
 .pilar-header {
@@ -336,6 +289,25 @@ section+section {
     padding: 180px 20px;
 }
 
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.pilar-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.pilar.active .pilar-content {
+    max-height: 300px;
+    margin-top: 20px;
+}
+
+
+
 .publico {
     background: linear-gradient(180deg, #111 0%, #1b1b1b 100%);
 }
@@ -368,3 +340,4 @@ section+section {
         font-size: 1rem;
         line-height: 1.7;
     }
+}
