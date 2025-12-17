@@ -7,19 +7,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-dark: #0f0f0f;
-    --text-light: #ffffff;
-    --accent: #c89b3c;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-}
-
-
 /* =========================
    VARIÁVEIS
 ========================= */
@@ -50,46 +37,6 @@ header {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-    min-height: 100vh;
-    background-image: url("hero.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-}
-
-.hero-content {
-    position: relative;
-    max-width: 800px;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    opacity: 0.9;
 }
 
 /* =========================
@@ -243,62 +190,6 @@ section+section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-.hero-video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    line-height: 1.1;
-}
-
-.hero-content p {
-    margin-top: 30px;
-    max-width: 720px;
-    font-size: 1.3rem;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-/* =========================
-   HERO COM VÍDEO
-========================= */
-
-.hero-video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -323,9 +214,10 @@ section+section {
 .hero-video .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
 }
+
 
 /* conteúdo */
 .hero-video .hero-content {
@@ -360,11 +252,6 @@ section+section {
     color: #ffffff;
 }
 
-background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 0.35),
-    rgba(0, 0, 0, 0.6));
-
-
 .bg-image .container {
     position: relative;
     z-index: 2;
@@ -387,51 +274,6 @@ background: linear-gradient(to bottom,
             #0f0f0f 0%,
             #161616 50%,
             #0f0f0f 100%);
-}
-
-/* =========================
-   PILARES
-========================= */
-
-.bg-pilares {
-    background: linear-gradient(180deg,
-            #111 0%,
-            #1a1a1a 50%,
-            #111 100%);
-}
-
-.pilares-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 60px;
-}
-
-/* CARD DO PILAR */
-.pilar {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 24px;
-    padding: 40px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-/* EFEITO DE BOTÃO */
-.pilar:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* CABEÇALHO DO PILAR */
-.pilar-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icone {
-    font-size: 2rem;
 }
 
 /* PILARES INTERATIVOS */
@@ -527,8 +369,26 @@ background: linear-gradient(to bottom,
         line-height: 1.7;
     }
 
-    @media (max-width: 768px) {
-        .conducao-imagem img {
-            max-width: 260px;
-        }
+    /* =========================
+   HERO OVERLAY (FORÇADO)
+========================= */
+
+    .hero-video {
+        position: relative;
+    }
+
+    .hero-video .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 2;
+    }
+
+    .hero-video video {
+        z-index: 1;
+    }
+
+    .hero-video .hero-content {
+        position: relative;
+        z-index: 3;
     }
