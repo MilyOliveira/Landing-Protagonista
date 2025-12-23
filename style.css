@@ -1701,3 +1701,63 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== FIX WATERMARK MOBILE ===== */
+@media (max-width: 900px) {
+    .conduz-watermark {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        letter-spacing: .08em;
+        font-size: clamp(2rem, 10vw, 4.2rem);
+        white-space: normal;
+        /* permite quebrar linha */
+        line-height: .95;
+        padding: 0 10px;
+    }
+}
+
+/* ===== MOBILE SIDE-BY-SIDE (QUEM CONDUZ) ===== */
+
+/* A partir de 420px (a maioria dos celulares), fica lado a lado */
+@media (max-width: 900px) and (min-width: 420px) {
+    .conduz-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        align-items: stretch;
+    }
+
+    .conduz-media {
+        min-height: 360px;
+    }
+
+    .conduz-panel {
+        padding: 18px 16px;
+    }
+
+    .conduz-title {
+        font-size: 1.9rem;
+    }
+
+    .conduz-lead {
+        font-size: .98rem;
+    }
+
+    .conduz-panel p {
+        font-size: .95rem;
+        line-height: 1.65;
+    }
+
+    .conduz-quote {
+        font-size: .95rem;
+        padding: 14px 14px;
+    }
+}
+
+/* Em telas MUITO pequenas, aí sim empilha (pra não ficar ilegível) */
+@media (max-width: 419px) {
+    .conduz-inner {
+        grid-template-columns: 1fr;
+    }
+}
