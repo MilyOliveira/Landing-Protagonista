@@ -1761,3 +1761,77 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   FIX MOBILE — QUEM CONDUZ
+   (foto + texto lado a lado)
+========================= */
+
+/* iPhone/Android comuns (>= 360px) */
+@media (max-width: 900px) {
+    .conduz-inner {
+        grid-template-columns: 0.95fr 1.05fr !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+    }
+
+    .conduz-media {
+        min-height: 520px !important;
+        border-radius: 18px 18px 40px 18px !important;
+    }
+
+    /* Aqui é o pulo do gato: no celular NÃO mostra a foto inteira,
+     mostra um recorte premium (fica mais imponente e não some) */
+    .conduz-media img {
+        object-fit: cover !important;
+        object-position: center 20% !important;
+        /* sobe um pouco pro rosto ficar bem */
+        transform: scale(1) !important;
+    }
+
+    .conduz-panel {
+        padding: 16px 14px !important;
+        border-radius: 18px !important;
+    }
+
+    .conduz-kicker {
+        font-size: .68rem !important;
+        letter-spacing: 2px !important;
+        padding: 7px 10px !important;
+    }
+
+    .conduz-title {
+        font-size: 1.7rem !important;
+        margin: 12px 0 10px !important;
+    }
+
+    .conduz-panel p {
+        font-size: .92rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .conduz-lead {
+        font-size: .96rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .conduz-quote {
+        font-size: .9rem !important;
+        padding: 12px 12px !important;
+        margin-top: 12px !important;
+    }
+}
+
+/* ===== Watermark mobile: menor + central + sem cortar ===== */
+@media (max-width: 900px) {
+    .conduz-watermark {
+        top: 8px !important;
+        font-size: 3rem !important;
+        letter-spacing: .10em !important;
+        opacity: .9;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
