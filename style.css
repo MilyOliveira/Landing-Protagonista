@@ -1835,9 +1835,3 @@ p {
         text-align: center !important;
     }
 }
-
-@media (max-width: 900px) {
-    body {
-        outline: 6px solid lime !important;
-    }
-}
