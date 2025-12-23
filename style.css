@@ -1763,64 +1763,71 @@ p {
 }
 
 /* =========================
-   FIX MOBILE — QUEM CONDUZ
-   (foto + texto lado a lado)
+   MOBILE PREMIUM — QUEM CONDUZ
+   Foto como fundo + painel sobreposto
 ========================= */
-
-/* iPhone/Android comuns (>= 360px) */
 @media (max-width: 900px) {
+
+    /* vira 1 coluna, mas sem ficar “foto depois texto” */
     .conduz-inner {
-        grid-template-columns: 0.95fr 1.05fr !important;
-        gap: 12px !important;
-        align-items: stretch !important;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
     }
 
+    /* foto vira “hero” da seção */
     .conduz-media {
-        min-height: 520px !important;
-        border-radius: 18px 18px 40px 18px !important;
+        min-height: 560px !important;
+        border-radius: 22px !important;
+        border: none !important;
+        box-shadow: 0 40px 120px rgba(0, 0, 0, .65) !important;
     }
 
-    /* Aqui é o pulo do gato: no celular NÃO mostra a foto inteira,
-     mostra um recorte premium (fica mais imponente e não some) */
     .conduz-media img {
         object-fit: cover !important;
-        object-position: center 20% !important;
-        /* sobe um pouco pro rosto ficar bem */
-        transform: scale(1) !important;
+        object-position: center 18% !important;
+        /* foco no rosto */
     }
 
+    /* painel vira sobreposição dentro da foto */
     .conduz-panel {
-        padding: 16px 14px !important;
-        border-radius: 18px !important;
-    }
+        position: relative !important;
+        margin-top: -210px !important;
+        /* puxa pra cima sobre a foto */
+        margin-left: 14px !important;
+        margin-right: 14px !important;
+        padding: 18px 16px !important;
 
-    .conduz-kicker {
-        font-size: .68rem !important;
-        letter-spacing: 2px !important;
-        padding: 7px 10px !important;
+        background: rgba(0, 0, 0, .55) !important;
+        border: 1px solid rgba(255, 255, 255, .10) !important;
+        backdrop-filter: blur(12px) !important;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, .55) !important;
     }
 
     .conduz-title {
-        font-size: 1.7rem !important;
-        margin: 12px 0 10px !important;
+        font-size: 2.05rem !important;
     }
 
     .conduz-panel p {
-        font-size: .92rem !important;
-        line-height: 1.55 !important;
-    }
-
-    .conduz-lead {
-        font-size: .96rem !important;
-        line-height: 1.55 !important;
+        font-size: .98rem !important;
+        line-height: 1.6 !important;
     }
 
     .conduz-quote {
-        font-size: .9rem !important;
-        padding: 12px 12px !important;
-        margin-top: 12px !important;
+        font-size: .95rem !important;
+    }
+
+    /* watermark menor e central */
+    .conduz-watermark {
+        top: 8px !important;
+        font-size: 2.6rem !important;
+        letter-spacing: .10em !important;
+        width: 100% !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
     }
 }
+
 
 /* ===== Watermark mobile: menor + central + sem cortar ===== */
 @media (max-width: 900px) {
